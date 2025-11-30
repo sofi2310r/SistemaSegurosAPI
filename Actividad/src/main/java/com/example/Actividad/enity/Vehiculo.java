@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity 
+@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,10 +14,10 @@ public class Vehiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "vehiculoid")
-    private Long vehiculoId;
+    public Long vehiculoId;
 
     @Column(name = "vehiculoplaca", nullable = false)
-    private String vehiculoPlaca;
+    public String vehiculoPlaca;
 
     @Column(name = "vehiculomarca", nullable = false, length = 100)
     private String vehicuMarca;
@@ -30,5 +30,6 @@ public class Vehiculo {
 
     @Column(name = "vehiculocolor", nullable = false, length = 100)
     private String vehiculoColor;
+
 
 }
